@@ -5,11 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace NSE.Identidade.API.Models
-{
-    //public class UserViewM[odels
-    //{
-    //}
-
+{    
     public class UsuarioRegistro
     {
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
@@ -34,4 +30,26 @@ namespace NSE.Identidade.API.Models
         [StringLength(100, ErrorMessage = "O Campo precisa ter entre {2} e {1} caracteres", MinimumLength = 6)]
         public string Senha { get; set; }
     }
+
+    public class UsuarioRespostaLogin
+    {
+        public string AccessToken { get; set; }
+        public double ExpiresIn { get; set; }
+        public UsuarioToken UsuarioToken { get; set; }
+    }
+
+    public class UsuarioToken
+    {
+        public string Id { get; set; }
+        public double Email { get; set; }
+        public IEnumerable<UsuarioClaim> Claims { get; set; }
+    }
+
+    public class UsuarioClaim
+    {
+        public string value { get; set; }
+        public string Type { get; set; }        
+    }
+
+
 }
