@@ -41,13 +41,13 @@ namespace NSE.Identidade.API.Models
     public class UsuarioToken
     {
         public string Id { get; set; }
-        public double Email { get; set; }
+        public string Email { get; set; }
         public IEnumerable<UsuarioClaim> Claims { get; set; }
     }
 
     public class UsuarioClaim
     {
-        public string value { get; set; }
+        public string Value { get; set; }
         public string Type { get; set; }        
     }
 

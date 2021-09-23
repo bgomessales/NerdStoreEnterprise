@@ -41,6 +41,15 @@ namespace NSE.Identidade.API
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            //Configurações para bloqueio por tentativas de login
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Default Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 4;
+                options.Lockout.AllowedForNewUsers = true;
+            });
+
             //JWT
 
             var AppSettingsSection = Configuration.GetSection("AppSettings");
