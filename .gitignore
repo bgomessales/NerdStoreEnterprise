@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/src/services/NSE.Identidade.API/Properties/serviceDependencies.json
+/src/services/NSE.Identidade.API/Configuration/SwaggerConfig.cs
