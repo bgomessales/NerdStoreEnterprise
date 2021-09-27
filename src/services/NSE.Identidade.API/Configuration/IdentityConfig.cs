@@ -31,7 +31,6 @@ namespace NSE.Identidade.API.Configuration
 
 
             // JWT
-
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
