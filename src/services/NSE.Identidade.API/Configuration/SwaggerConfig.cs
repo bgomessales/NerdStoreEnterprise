@@ -21,7 +21,6 @@ namespace NSE.Identidade.API.Configuration
                     Contact = new OpenApiContact() { Name = "Eduardo Pires", Email = "contato@desenvolvedor.io" },
                     License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }
                 });
-
             });
 
             return services;
